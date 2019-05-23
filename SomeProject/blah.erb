@@ -1,0 +1,55 @@
+<%
+
+
+%>
+
+<html>
+
+<head><title>ERB Stuff</title></head>
+
+<body>
+
+<h1>Hello!</h1>
+
+This is a file!<br>
+
+<%
+
+name='Tim'
+
+%>
+
+Your name is: <%= name %><br>
+<br>
+
+<%
+
+people.each_pair do | key, value |
+
+%>
+
+<table border>
+<tr><th colspan=2>Pets: <%= key %></th></td>
+<tr><td>Name</td><td>Age</td></tr>
+
+<%
+
+	people[key].each_pair do |pet_name, pet_age |
+	
+	%>
+	<tr><td><%= pet_name %></td><td><%= pet_age %></td></tr>
+	<%
+	
+	end
+
+%>
+
+</table>
+<br>
+<%
+
+end
+
+%>
+</body>
+</html>
